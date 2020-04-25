@@ -1,19 +1,21 @@
 {
   "name": "ada-joe",
   "version": "2.0.0",
-  "description": "Minimal Apostrophe Boilerplate",
+  "description": "Ada & Joe's Wedding Website",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "monitor": "monitor"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "P'unk Avenue",
+  "author": "Joe Innes",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "^2.103.1"
+    "apostrophe": "^2.103.1",
+    "dotenv": "^8.2.0"
   },
   "nodemonConfig": {
     "verbose": true,
@@ -28,5 +30,8 @@
       "data"
     ],
     "ext": "json, js, html, less"
+  },
+  "devDependencies": {
+    "apostrophe-monitor": "git+https://github.com/apostrophecms/apostrophe-monitor.git"
   }
 }

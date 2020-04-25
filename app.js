@@ -1,6 +1,9 @@
+require('dotenv').config()
+
 var path = require('path');
 
 var apos = require('apostrophe')({
+  root: module,
   shortName: 'ada-joe',
 
   // See lib/modules for basic project-level configuration of our modules
@@ -21,8 +24,13 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
+    'ada-joe-theme': {},
+    'full-width-text-widgets': {
+      fonts: ['Dancing Script', 'Darker Grotesque', 'Handlee', 'Leckerli One', 'Meddon']
+    },
+    'horizontal-rule-widgets': {},
     'apostrophe-db': {
-      uri: 'mongodb+srv://ada-joe:3McYVliS8uwVpZjV@joessandboxcluster-up1ti.mongodb.net/test?retryWrites=true&w=majority'
+      uri: process.env.DB_CONNECTION_STRING
       // uri: 'mongodb://localhost:27017/apostrophe-sandbox'
       // There is legacy support for host, port, name, user and password options,
       // but this is not necessary. They can all go in the uri option like this:
@@ -30,3 +38,5 @@ var apos = require('apostrophe')({
     }
   }
 });
+
+module.exports = apos

@@ -1,17 +1,15 @@
-{#
-  This is an example home page template. It inherits and extends a layout template
-  that lives in the top-level views/ folder for convenience
-#}
-
-{% extends "layout.html" %}
-
-{% block main %}
-  <div class="main-content">
-    <h3>Hello world!
-      {% if not data.user %}
-        <a class="login-link" href="{{ apos.prefix }}/login">Login</a>
-      {% endif %}
-    </h3>
-    <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
+{# This is an example home page template. It inherits and extends a layout
+template that lives in the top-level views/ folder for convenience #} {% extends
+"layout.html" %} {% block main %}
+<main>
+  <div id="top-lights"></div>
+  <div id="falling-lights"></div>
+  <div class="main-content container" style="margin-top: 100px;">
+    <div class="padded">
+      <section class="c-card">
+        {{apos.area(data.page, 'mainContent', { widgets: { 'full-width-text': {}, 'horizontal-rule': {} }
+        }) }}
+      </section>
   </div>
+</main>
 {% endblock %}

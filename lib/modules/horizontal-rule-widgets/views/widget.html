@@ -1,0 +1,11 @@
+{% if data.widget.text %}
+<div class="c-horizontal-rule">
+    <div class="c-horizontal-rule__line" style="border-color: {{ data.widget.lineColor if data.widget.lineColour else '#000' }}"></div>
+    <div class="c-horizontal-rule__centred-text">
+      {{data.widget.text}}
+    </div>
+    <div class="c-horizontal-rule__line" style="border-color: {{ data.widget.lineColor if data.widget.lineColour else '#000' }}"></div>
+  </div>
+{% else %}
+<hr style="border-color: {{ data.widget.lineColor if data.widget.lineColour else '#000' }}" />
+{% endif %}
