@@ -1,3 +1,6 @@
 [submodule "lib/modules/horizontal-rule-widgets"]
 	path = lib/modules/horizontal-rule-widgets
 	url = https://github.com/traist-web-services/horizontal-rule-widgets.git
+[submodule "lib/modules/full-width-text-widgets"]
+	path = lib/modules/full-width-text-widgets
+	url = https://github.com/traist-web-services/full-width-text-widgets.git
