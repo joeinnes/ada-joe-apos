@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "apostrophe": "^2.103.1",
+    "apostrophe-tiptap-rich-text-widgets": "^0.3.5",
     "dotenv": "^8.2.0"
   },
   "nodemonConfig": {
