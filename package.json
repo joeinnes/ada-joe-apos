@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "monitor": "monitor"
+    "monitor": "monitor",
+    "deploy-prod": "sc-deploy production"
   },
   "repository": {
     "type": "git",
