@@ -26,7 +26,7 @@ var apos = require('apostrophe')({
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
     'ada-joe-theme': {},
     'full-width-text-widgets': {
-      fonts: ['Dancing Script', 'Darker Grotesque', 'Handlee', 'Leckerli One', 'Meddon']
+      fonts: ['Dancing Script', 'Darker Grotesque', 'Leckerli One', 'Meddon']
     },
     'horizontal-rule-widgets': {},
     'apostrophe-db': {

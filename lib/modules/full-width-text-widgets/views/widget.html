@@ -5,9 +5,14 @@
       <div
         style="font-family: {{ data.widget.font if data.widget.font else 'inherit' }}; {{ 'text-transform: uppercase;' if data.widget.forceUppercase}}"
       >
-        {{ apos.singleton(data.widget, 'textContent', 'apostrophe-rich-text', {
-        toolbar: ['Bold', 'Italic', 'Link', 'Unlink'], controls: { position:
-        'bottom-right' } }) }}
+        {{ apos.singleton(data.widget, 'textContent', 'apostrophe-rich-text',
+          {
+            toolbar: ['Styles', 'Bold', 'Italic', 'Link', 'Unlink'], 
+            controls: { 
+              position: 'bottom-right'
+            },
+            styles: apos.fwtw.fontStyles
+          }) }}
       </div>
     </div>
   </div>

@@ -1,15 +1,51 @@
 {# This is an example home page template. It inherits and extends a layout
-template that lives in the top-level views/ folder for convenience #} {% extends
-"layout.html" %} {% block main %}
-<main>
-  <div id="top-lights"></div>
-  <div id="falling-lights"></div>
-  <div class="main-content container" style="margin-top: 100px;">
-    <div class="padded">
+template that lives in the top-level views/ folder for convenience #} 
+
+{% extends "layout.html" %} 
+
+{% block beforeMain %}
+    <header>
+      <div id="o-top-lights"></div>
+      <div id="o-falling-lights"></div>
+      <div class="c-site-title">
+        <div class="fittext" style="font-family: Meddon">
+          <h1>{{data.page.pageTitle}}</h1>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block main %}
+  <main>
+    <div class="c-container">
       <section class="c-card">
-        {{apos.area(data.page, 'mainContent', { widgets: { 'full-width-text': {}, 'horizontal-rule': {} }
-        }) }}
+        {{apos.area(data.page, 'mainContent', { 
+            widgets: { 
+              'full-width-text': {}, 
+              'horizontal-rule': {}
+            }
+          })
+        }}
       </section>
-  </div>
-</main>
+  </main>
+{% endblock %}
+
+{% block afterMain %}
+  <footer>
+    {% if data.page.lang === 'en' %}
+    <div>
+      <a href="/hu">🇭🇺</a> <span id="language"></span>
+    </div>
+    <p>
+      With ❤️ from Ada & Joe
+    </p>
+    {% else %}
+    <div>
+      <a href="/">🇬🇧</a> <span id="language"></span>
+    </div>
+    <p>
+      Szeretettel Ada & Joe ❤️
+    </p>
+    {% endif %}
+  </footer>
 {% endblock %}

@@ -1,5 +1,5 @@
 /* CSS files add styling rules to your content */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Darker+Grotesque&family=Handlee&family=Leckerli+One&family=Meddon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Darker+Grotesque&family=Leckerli+One&family=Meddon&display=swap");
 
 html,
 body {
@@ -7,6 +7,31 @@ body {
   margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.c-site-title,
+main {
+  text-shadow: 2px 2px #000;
+}
+
+.c-site-title {
+  text-align: center;
+  h1 {
+    font-size: 1em;
+  }
+}
+
+header {
+  width: 100vw;
+  max-width: 100vw;
+  margin: auto;
 }
 
 h1 {
@@ -15,49 +40,54 @@ h1 {
 }
 
 body {
-  background: url('/modules/ada-joe-theme/img/bgs/woodbg.jpg');
-  /* background-size: 200px; */
-  /*background-repeat: repeat-y;*/
-  // opacity: 0;
-  .main-content {
-    font-family: "Darker Grotesque", helvetica, arial, sans-serif;
-    --main-bg-color: #382016;
-    --main-text-color: #EFD0CA;
-    --card-bg-color: #EFD0CA;
-    --card-text-color: #382016; /* var(--main-bg-color);*/
+  background: url("/modules/ada-joe-theme/img/bgs/woodbg.jpg");
+}
+
+main, header, footer {
+  --main-bg-color: #382016;
+  --main-text-color: #efd0ca;
+  --card-bg-color: #efd0ca;
+  --card-text-color: #382016;
+  font-family: "Darker Grotesque", helvetica, arial, sans-serif;
+  color: var(--main-text-color);
+  a {
     color: var(--main-text-color);
-    margin-top: 0px;
-    text-shadow: 2px 2px #000;
-    box-shadow: 0 0 5vw 5vw rgba(0, 0, 0, 0.4) inset;
   }
+}
+
+body > .apos-refreshable {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  min-height: 100vh;
 }
 
 .c-card {
   background-color: var(--card-bg-color);
-  background: url('/modules/ada-joe-theme/img/bgs/rosegoldbg.jpg');
+  background: url("/modules/ada-joe-theme/img/bgs/rosegoldbg.jpg");
   background-size: cover;
   color: var(--card-text-color);
-  border-radius: 10px;
-  box-shadow: 1vw 1vh 1vw 1vw rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
   text-shadow: 1px 1px #000;
-  padding: 0 2vw 2vw 2vw;
+  padding: 0 2rem 2rem 2rem;
+  margin-bottom: 3rem;
+  a {
+    color: var(--card-text-color);
+  }
 }
 
 .mailtoui-modal {
   text-shadow: none;
 }
 
-.c-card a {
-  color: var(--card-text-color);
-}
-
 p {
   margin: 0px;
 }
 
-#top-lights {
+#o-top-lights {
   position: absolute;
-  background: url("https://cdn.glitch.com/b6b174b3-2c61-4c47-8475-d07397416ce2%2FString_Lights_2.png?v=1583615285055");
+  background: url("/modules/ada-joe-theme/img/lights/string-lights.png");
   background-size: 120vw;
   background-repeat: no-repeat;
   min-height: 110vh;
@@ -70,9 +100,9 @@ p {
   opacity: 0.5;
 }
 
-#falling-lights {
+#o-falling-lights {
   position: absolute;
-  background: url("https://cdn.glitch.com/b6b174b3-2c61-4c47-8475-d07397416ce2%2FString_Lights_24.png?v=1583617141257");
+  background: url("/modules/ada-joe-theme/img/lights/falling-lights.png");
   background-repeat: repeat;
   background-size: cover;
   min-height: 100vh;
@@ -83,152 +113,52 @@ p {
   opacity: 0.3;
 }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font-1 {
-  font-family: "Handlee";
-}
-
-.font-2 {
-  font-family: "Dancing Script";
-}
-
-.font-3 {
-  font-family: "Leckerli One";
-}
-
-.font-5 {
-  font-family: "Meddon";
-}
-
-.font-sans {
-  font-family: "Darker Grotesque";
-  text-transform: uppercase;
-}
-
-.j-and-c {
-  text-align: justify;
-  text-align-last: center;
-}
-
 h1 {
   padding: 0px;
   margin: 0px;
 }
 
-.main-content {
-  max-width: 50vw;
+.c-container {
+  max-width: 30vw;
   margin: auto;
-}
-
-.padded {
-  padding: 0 10vw 0 10vw;
   margin-top: -1rem;
 }
 
-hr {
-  border: none;
-  border-top: 4px dotted var(--card-text-color);
-}
-
-.line {
-  border: none;
-  border-bottom: 1px solid var(--card-text-color);
-}
-
-.cols {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem 0;
-}
-
-nav a {
-  padding: 0 0.2rem;
-  text-decoration: none;
-}
-
-.cols > .line {
-  flex-grow: 1;
-}
-
-.cols > .center-text {
-  padding: 0 1rem 0 1rem;
-}
-
-.float-right {
-  float: right;
-}
-
-.container-wide {
+.c-container--wide {
   max-width: 60vw;
   margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
-  .main-content {
+  .c-container, .c-container--wide {
     max-width: 90vw;
     margin: auto;
   }
-  .padded {
-    padding: 5vw;
-  }
-}
-
-summary {
-  font-size: 1.2rem;
-}
-
-summary:focus {
-  outline: 0px;
-}
-
-details p {
-  padding-bottom: 1rem;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  color: var(--main-text-color);
-}
-
-main {
-  margin-bottom: 2rem;
-  min-height: 100vh;
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   margin-top: auto;
   background-color: var(--main-text-color);
   color: var(--main-bg-color);
-  padding: 0.2rem 1rem 0.2rem 1rem;
   text-shadow: none;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-#flag {
-  border: 0;
-  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding: 0 20vw 0 20vw;
+  a {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+    padding: 0.25rem 0.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+      background: var(--main-bg-color);
+    }
+  }
+  #flag {
+    border: 0;
+    text-decoration: none;
+  }
 }
