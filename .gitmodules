@@ -1,0 +1,3 @@
+[submodule "lib/modules/horizontal-rule-widgets"]
+	path = lib/modules/horizontal-rule-widgets
+	url = https://github.com/traist-web-services/horizontal-rule-widgets.git
