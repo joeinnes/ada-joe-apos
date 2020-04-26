@@ -26,13 +26,9 @@ var apos = require('apostrophe')({
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
     'ada-joe-theme': {},
     'full-width-text-widgets': {
-      contextualOnly: true,
       fonts: ['Dancing Script', 'Darker Grotesque', 'Leckerli One', 'Meddon']
     },
     'horizontal-rule-widgets': {},
-    'apostrophe-assets': {
-      lean: true
-    },
     'apostrophe-tiptap-rich-text-widgets': {},
     'apostrophe-db': {
       // uri: process.env.DB_CONNECTION_STRING
