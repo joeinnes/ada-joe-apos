@@ -16,3 +16,4 @@ node_modules
 .jshintrc
 /public/js/_site-compiled.js
 .env
+.DS_Store
