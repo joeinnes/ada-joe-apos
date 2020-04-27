@@ -30,6 +30,7 @@ var apos = require('apostrophe')({
     },
     'horizontal-rule-widgets': {},
     'apostrophe-tiptap-rich-text-widgets': {},
+    'countdown-widgets': {},
     'apostrophe-db': {
       // uri: process.env.DB_CONNECTION_STRING
       // uri: 'mongodb://localhost:27017/apostrophe-sandbox'
