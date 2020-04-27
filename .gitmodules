@@ -4,3 +4,6 @@
 [submodule "lib/modules/full-width-text-widgets"]
 	path = lib/modules/full-width-text-widgets
 	url = https://github.com/traist-web-services/full-width-text-widgets.git
+[submodule "lib/modules/countdown-widgets"]
+	path = lib/modules/countdown-widgets
+	url = https://github.com/traist-web-services/countdown-widgets.git
