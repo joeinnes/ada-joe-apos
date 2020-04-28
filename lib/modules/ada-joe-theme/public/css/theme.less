@@ -7,7 +7,7 @@ body {
   margin: 0;
   max-width: 100vw;
   width: 100vw;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,6 +23,8 @@ main {
 }
 
 .c-site-title {
+  width: 50vw;
+  margin: auto;
   text-align: center;
   h1 {
     font-size: 1em;
@@ -30,9 +32,7 @@ main {
 }
 
 .c-header {
-  width: 60vw;
-  max-width: 60vw;
-  margin: auto;
+  width: 100vw;
 }
 
 body {
@@ -67,8 +67,8 @@ body > .apos-refreshable {
   border-radius: 1rem;
   box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
   text-shadow: 1px 1px #000;
-  padding: 0 2rem 2rem 2rem;
-  margin-bottom: 3rem;
+  padding: 0 2rem 1rem 2rem;
+  margin-bottom: 1rem;
   a {
     color: var(--card-text-color);
   }
@@ -87,7 +87,7 @@ p {
   position: absolute;
   background: url("/modules/ada-joe-theme/img/lights/string-lights.png");
   background-size: 120vw;
-  min-height: 110vh;
+  min-height: 100%;
   background-repeat: no-repeat;
   width: 100vw;
   z-index: -1;
@@ -132,11 +132,12 @@ h1 {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: auto;
   background-color: var(--main-text-color);
   color: var(--main-bg-color);
   text-shadow: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 3rem;
   padding: 0 20vw 0 20vw;
   a {
@@ -150,9 +151,16 @@ footer {
       background: var(--main-bg-color);
     }
   }
-  #flag {
-    border: 0;
+  .flag {
+    border: 1;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .flag svg {
+    height: 1.25rem;
   }
 }
 
@@ -167,7 +175,7 @@ footer {
   }
 
   .c-site-title {
-    max-width: 100vw;
+    width: 90vw;
   }
 
   .c-card {
@@ -177,5 +185,6 @@ footer {
   footer {
     padding: 0 5vw 0 5vw;
     max-width: 100vw;
+    font-size: 1rem;
   }
 }
