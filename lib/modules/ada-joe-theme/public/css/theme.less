@@ -1,195 +1,29 @@
-/* CSS files add styling rules to your content */
+/* Imports */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Darker+Grotesque&family=Leckerli+One&family=Meddon&display=swap");
 
-html,
-body {
-  min-height: 100%;
-  margin: 0;
-  max-width: 100vw;
-  width: 100vw;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// SETTINGS
+@import 'settings/settings.less';
 
-img {
-  width: 100%;
-  height: auto;
-}
+// TOOLS
+@import 'tools/tools.less';
 
-.c-site-title,
-main {
-  text-shadow: 2px 2px #000;
-}
+// GENERIC
+@import 'generic/generic.less';
 
-.c-site-title {
-  width: 50vw;
-  margin: auto;
-  text-align: center;
-  h1 {
-    font-size: 1em;
-  }
-}
+// ELEMENTS
+@import 'elements/elements.less';
 
-.c-header {
-  width: 100vw;
-}
+// OBJECTS
+@import 'objects/container.less';
+@import 'objects/falling-lights.less';
+@import 'objects/page.less';
+@import 'objects/top-lights.less';
 
-body {
-  background: url("/modules/ada-joe-theme/img/bgs/woodbg.jpg");
-}
 
-main, header, footer {
-  max-width: 100vw;
-  --main-bg-color: #382016;
-  --main-text-color: #efd0ca;
-  --card-bg-color: #efd0ca;
-  --card-text-color: #382016;
-  font-family: "Darker Grotesque", helvetica, arial, sans-serif;
-  color: var(--main-text-color);
-  a {
-    color: var(--main-text-color);
-  }
-}
+// COMPONENTS
+@import 'components/card.less';
+@import 'components/flag.less';
+@import 'components/site-title.less';
 
-body > .apos-refreshable {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 0px;
-  min-height: 100vh;
-}
-
-main, header {
-  flex: 1;
-}
-
-.c-card {
-  background-color: var(--card-bg-color);
-  background: url("/modules/ada-joe-theme/img/bgs/rosegoldbg.jpg");
-  background-size: cover;
-  color: var(--card-text-color);
-  border-radius: 1rem;
-  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
-  text-shadow: 1px 1px #000;
-  padding: 0 2rem 1rem 2rem;
-  margin-bottom: 1rem;
-  a {
-    color: var(--card-text-color);
-  }
-  text-align: center;
-}
-
-.mailtoui-modal {
-  text-shadow: none;
-}
-
-p {
-  margin: 0px;
-}
-
-#o-top-lights {
-  position: absolute;
-  background: url("/modules/ada-joe-theme/img/lights/string-lights.png");
-  background-size: 120vw;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  width: 100vw;
-  z-index: -1;
-  margin-top: -10%;
-  padding-top: 10%;
-  margin-left: -10%;
-  padding-left: 10%;
-  opacity: 0.5;
-}
-
-#o-falling-lights {
-  position: absolute;
-  background: url("/modules/ada-joe-theme/img/lights/falling-lights.png");
-  background-repeat: repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
-}
-
-h1 {
-  padding: 0px;
-  margin: 0px;
-}
-
-.c-container {
-  max-width: 30vw;
-  width: 30vw;
-  margin: auto;
-  margin-top: -1rem;
-}
-
-.c-container--wide {
-  max-width: 60vw;
-  width: 60vw;
-  margin: auto;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  background-color: var(--main-text-color);
-  color: var(--main-bg-color);
-  text-shadow: none;
-  font-size: 1.25rem;
-  line-height: 3rem;
-  padding: 0 20vw 0 20vw;
-  a {
-    text-decoration: none;
-    border-radius: 0.5rem;
-    border: 1px solid #000;
-    padding: 0.25rem 0.5rem;
-    transition: 0.5s;
-    cursor: pointer;
-    &:hover{
-      background: var(--main-bg-color);
-    }
-  }
-  .flag {
-    border: 1;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  .flag svg {
-    height: 1.25rem;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .c-container, .c-container--wide {
-    max-width: 90vw;
-    width: 90vw;
-    margin: auto;
-    * {
-      max-width: 90vw;
-    }
-  }
-
-  .c-site-title {
-    width: 90vw;
-  }
-
-  .c-card {
-    max-width: 100%;
-  }
-
-  footer {
-    padding: 0 5vw 0 5vw;
-    max-width: 100vw;
-    font-size: 1rem;
-  }
-}
+// UTILITIES
+@import 'utilities/utilities.less';

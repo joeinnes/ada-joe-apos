@@ -1,0 +1,23 @@
+.o-container {
+  max-width: 30vw;
+  width: 30vw;
+  margin: auto;
+  margin-top: -1rem;
+}
+
+.o-container--wide {
+  max-width: 60vw;
+  width: 60vw;
+  margin: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .o-container, .o-container--wide {
+      max-width: 90vw;
+      width: 90vw;
+      margin: auto;
+      * {
+        max-width: 90vw;
+      }
+    }
+  }

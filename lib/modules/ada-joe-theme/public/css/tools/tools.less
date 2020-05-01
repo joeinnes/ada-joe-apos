@@ -1,0 +1,10 @@
+.flex(@direction: row, @break: nowrap, @alignHorizontal: center, @alignVertical: center) {
+  display: flex;
+  flex-flow: @direction @break;
+  justify-content: @alignHorizontal;
+  align-items: @alignVertical;
+}
+
+.text-shadow(@offsetH: 2px, @offsetV: 2px, @colour: @dark-shadow) {
+  text-shadow: @offsetH @offsetV @colour;
+}

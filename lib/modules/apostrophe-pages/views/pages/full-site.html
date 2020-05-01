@@ -7,10 +7,13 @@ template that lives in the top-level views/ folder for convenience #}
     <header>
       <div id="o-top-lights"></div>
       <div id="o-falling-lights"></div>
-      <div class="c-header">
-        <div class="c-site-title">
-          <div class="fittext" style="font-family: Meddon">
+      <div class="c-header--full">
+        <div class="c-site-title--full">
+          <h1>
             {{data.page.pageTitle}}
+          </h1>
+          <div class="counter">
+            <h1>COUNTER</h1>
           </div>
         </div>
       </div>
@@ -19,17 +22,17 @@ template that lives in the top-level views/ folder for convenience #}
 
 {% block main %}
   <main>
-    <div class="o-container">
-      <section class="c-card">
-        {{apos.area(data.page, 'mainContent', { 
-            widgets: { 
-              'full-width-text': {}, 
-              'horizontal-rule': {},
-              'countdown': {}
-            }
-          })
-        }}
-      </section>
+    <div class="c-container--wide">
+      <div class="c-container__inner">
+            {{apos.area(data.page, 'mainContent', { 
+              widgets: { 
+                'full-width-text': {}, 
+                'horizontal-rule': {},
+                'countdown': {}
+              }
+            })
+          }}
+      </div>
   </main>
 {% endblock %}
 
