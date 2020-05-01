@@ -7,3 +7,6 @@
 [submodule "lib/modules/countdown-widgets"]
 	path = lib/modules/countdown-widgets
 	url = https://github.com/traist-web-services/countdown-widgets.git
+[submodule "lib/modules/two-column-layout-widgets"]
+	path = lib/modules/two-column-layout-widgets
+	url = https://github.com/traist-web-services/two-column-layout-widgets.git
