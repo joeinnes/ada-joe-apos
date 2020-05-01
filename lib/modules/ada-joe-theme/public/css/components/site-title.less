@@ -1,9 +1,15 @@
 .c-site-title {
   .text-shadow();
-  width: 50vw;
   margin: auto;
   text-align: center;
+  font-family: @site-title-font;
 }
+
+.c-site-title--full {
+  flex: 2;
+  .text-shadow();
+  font-family: @site-title-font-alt;
+} 
 
 @media only screen and (max-width: 700px) {
     .c-site-title {

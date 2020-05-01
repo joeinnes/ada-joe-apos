@@ -1,0 +1,19 @@
+.c-countdown {
+  max-width: 100%;
+  font-weight: bolder;
+}
+
+.tick-flip-panel {
+  color: @main-text-colour !important;
+}
+
+.tick-flip-panel {
+  background-color: @main-bg-colour !important;
+  border: 1px solid @main-text-colour;
+  &:nth-child(1) {
+    border-bottom: none;
+  }
+  &:nth-child(2) {
+      border-top: none;
+  }
+}

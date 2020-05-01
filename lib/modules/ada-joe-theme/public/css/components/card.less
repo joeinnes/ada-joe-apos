@@ -1,17 +1,31 @@
 .c-card {
-  background-color: @card-bg-color;
+  background-color: @card-bg-colour;
   background: url(@card-bg-url);
   background-size: cover;
-  color: @card-text-color;
+  color: @card-text-colour;
   border-radius: 1rem;
   box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
   .text-shadow(1px, 1px, #000);
   padding: 0 2rem 1rem 2rem;
   margin-bottom: 1rem;
   a {
-    color: @card-text-color;
+    color: @card-text-colour;
   }
   text-align: center;
+}
+
+.c-card--simple {
+  background-color: @card-bg-colour;
+  background-size: cover;
+  color: @card-text-colour;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
+  padding: 0 2rem 1rem 2rem;
+  text-shadow: none;
+  margin-bottom: 2rem;
+  a {
+    color: @card-text-colour;
+  }
 }
 
 @media only screen and (max-width: 700px) {

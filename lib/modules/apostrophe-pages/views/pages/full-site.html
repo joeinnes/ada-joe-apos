@@ -8,27 +8,60 @@ template that lives in the top-level views/ folder for convenience #}
       <div id="o-top-lights"></div>
       <div id="o-falling-lights"></div>
       <div class="c-header--full">
-        <div class="c-site-title--full">
-          <h1>
-            {{data.page.pageTitle}}
+        <div class="c-site-title c-site-title--full">
+          <h1 class="fittext">
+            Ada & Joe
           </h1>
-          <div class="counter">
-            <h1>COUNTER</h1>
-          </div>
+        </div>
+        <div></div>
+        <div class="c-countdown">
+          {{apos.singleton(data.page, 'countDown', 'countdown' , {})}}
         </div>
       </div>
+      <nav class="c-navbar">
+        <ul class="c-nav-menu">
+          {% if data.page %}
+            {% for tab in data.home._children %}
+                {% if tab.lang == data.page.lang and tab.title !== "Ada & Joe" %}
+                <li class="
+                  {% if data.page and
+                    (tab._id == data.page._id)
+                  %}
+                    current
+                  {% endif %}
+                "><a href="{{ tab._url }}">{{ tab.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </ul>
+      </nav>
     </header>
 {% endblock %}
 
 {% block main %}
   <main>
-    <div class="c-container--wide">
-      <div class="c-container__inner">
+    <div class="o-container--wide">
+      <div class="c-card--simple">
             {{apos.area(data.page, 'mainContent', { 
               widgets: { 
-                'full-width-text': {}, 
-                'horizontal-rule': {},
-                'countdown': {}
+                'apostrophe-rich-text': {
+                  toolbar: ['styles', 'bold', 'italic', 'link'],
+                  styles: [{
+                    tag: 'p',
+                    label: 'Default'
+                  }, {
+                    tag: 'h2',
+                    label: 'Heading'
+                  },{
+                    tag: 'h3',
+                    label: 'Subheading'
+                  }],
+                  controls: {
+                    position: 'bottom-right'
+                  }
+                }, 
+                'two-column-layout': {},
+                'apostrophe-images': {}
               }
             })
           }}

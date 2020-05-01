@@ -7,10 +7,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url(@main-bg-url);
-  
-  
+  font-size: 1.15rem;
   a {
-    color: @main-text-color;
+    color: @main-text-colour;
   }
 }
 
@@ -20,8 +19,27 @@ header, main, footer {
 
 header, main {
   flex: 1;
-  color: @main-text-color;
+  color: @main-text-colour;
   font-family: @default-font-stack;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 header {
@@ -36,8 +54,8 @@ footer {
   width: 100vw;
   .flex(row, nowrap, space-around, center);
   font-family: @default-font-stack;
-  background-color: @card-bg-color;
-  color: @card-text-color;
+  background-color: @card-bg-colour;
+  color: @card-text-colour;
   font-size: 1.25rem;
   line-height: 3rem;
   a {
@@ -48,7 +66,7 @@ footer {
     transition: 0.5s;
     cursor: pointer;
     &:hover{
-      background: @card-text-color;
+      background: @card-text-colour;
     }
   }
 }

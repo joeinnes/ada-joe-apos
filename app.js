@@ -31,12 +31,21 @@ var apos = require('apostrophe')({
     'horizontal-rule-widgets': {},
     'apostrophe-tiptap-rich-text-widgets': {},
     'countdown-widgets': {},
+    'two-column-layout-widgets': {},
     'apostrophe-db': {
       // uri: process.env.DB_CONNECTION_STRING
       // uri: 'mongodb://localhost:27017/apostrophe-sandbox'
       // There is legacy support for host, port, name, user and password options,
       // but this is not necessary. They can all go in the uri option like this:
       // mongodb://user:password@host:port/dbname
+    },
+    'apostrophe-pages': {
+      ancestors: {
+        children: {
+          depth: 2
+        }
+      },
+      children: true
     }
   }
 });
