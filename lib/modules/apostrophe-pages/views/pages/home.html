@@ -39,7 +39,7 @@ template that lives in the top-level views/ folder for convenience #}
     {% if data.page.lang === 'en' %}
     <div>
       <a href="/hu" class="flag">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3" class="hide-ie">
           <rect fill="#436F4D" width="6" height="3"/>
           <rect fill="#FFF" width="6" height="2"/>
           <rect fill="#CD2A3E" width="6" height="1"/>
@@ -48,12 +48,12 @@ template that lives in the top-level views/ folder for convenience #}
       </a>
     </div>
     <p>
-      With ❤️ from Ada & Joe<span class="ie-only"> - this page looks better in <a href"http://outdatedbrowser.com" class="c-footer__link--inherit-styles">a modern browser</a>!</span>
+      With ❤️ from Ada & Joe<span class="ie-only" style="color: #000"> - this page looks better in <a href="http://outdatedbrowser.com" class="c-footer__link--inherit-styles">a modern browser</a>!</span>
     </p>
     {% else %}
     <div>
       <a href="/" class="flag">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" class="hide-ie">
         <clipPath id="t">
         <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
         </clipPath>
@@ -63,11 +63,11 @@ template that lives in the top-level views/ folder for convenience #}
         <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
         <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
         </svg>
-        <span class="ie-only">English</span>
+        <span class="ie-only c-footer__link--inherit-styles">English</span>
         </a>
     </div>
     <p>
-      Szeretettel Ada & Joe ❤️<span class="ie-only"> - ez az oldal jobban nez ki <a href"http://outdatedbrowser.com">egy korszerű böngészővél</a>!</span>
+      Szeretettel Ada & Joe ❤️<span class="ie-only"> - ez az oldal jobban nez ki <a href="http://outdatedbrowser.com" class="c-footer__link--inherit-styles">egy korszerű böngészővél</a>!</span>
     </p>
     {% endif %}
   </footer>
