@@ -4,4 +4,14 @@
 
 .apos-ui {
   text-shadow: none;
+  max-width: 100%;
+}
+
+.ie-only {
+  display: none;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ie-only {
+    display: initial;
+  }
 }

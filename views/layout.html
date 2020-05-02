@@ -18,6 +18,8 @@
     This block outputs its contents in the HTML document's <head>.
     It is a good place to put extra <script> <link> and <meta> tags.
   #}
+  <!--[if lte IE 9]><meta http-equiv="refresh" content="0;URL='http://outdatedbrowser.com'"><![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
 {% endblock %}
 
 {% block beforeMain %}

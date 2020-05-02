@@ -1,0 +1,22 @@
+.c-footer {
+  .flex(row, nowrap, space-around, center);
+  font-family: @default-font-stack;
+  background-color: @card-bg-colour;
+  color: @card-text-colour;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  a:not(.c-footer__link--inherit-styles) {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+    padding: 0.5rem 0.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      background: @card-text-colour;
+    }
+  }
+  p {
+    margin-bottom: 0rem;
+  }
+}

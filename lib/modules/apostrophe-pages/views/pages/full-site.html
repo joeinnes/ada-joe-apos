@@ -45,7 +45,7 @@ template that lives in the top-level views/ folder for convenience #}
             {{apos.area(data.page, 'mainContent', { 
               widgets: { 
                 'apostrophe-rich-text': {
-                  toolbar: ['styles', 'bold', 'italic', 'link'],
+                  toolbar: ['styles', 'bold', 'italic', 'link', 'bullet_list'],
                   styles: [{
                     tag: 'p',
                     label: 'Default'
@@ -70,38 +70,40 @@ template that lives in the top-level views/ folder for convenience #}
 {% endblock %}
 
 {% block afterMain %}
-  <footer>
-    {% if data.page.lang === 'en' %}
-    <div>
-      <a href="/hu" class="flag">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3">
-          <rect fill="#436F4D" width="6" height="3"/>
-          <rect fill="#FFF" width="6" height="2"/>
-          <rect fill="#CD2A3E" width="6" height="1"/>
-          </svg>
-      </a>
-    </div>
-    <p>
-      With ❤️ from Ada & Joe
-    </p>
-    {% else %}
-    <div>
-      <a href="/" class="flag">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
-        <clipPath id="t">
-        <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-        </clipPath>
-        <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
+<footer class="c-footer">
+  {% if data.page.lang === 'en' %}
+  <div>
+    <a href="/hu" class="flag">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3">
+        <rect fill="#436F4D" width="6" height="3"/>
+        <rect fill="#FFF" width="6" height="2"/>
+        <rect fill="#CD2A3E" width="6" height="1"/>
         </svg>
-        </a>
-    </div>
-    <p>
-      Szeretettel Ada & Joe ❤️
-    </p>
-    {% endif %}
-  </footer>
+        <span class="ie-only">Magyar</span>
+    </a>
+  </div>
+  <p>
+    With ❤️ from Ada & Joe<span class="ie-only"> - this page looks better in <a href"http://outdatedbrowser.com" class="c-footer__link--inherit-styles">a modern browser</a>!</span>
+  </p>
+  {% else %}
+  <div>
+    <a href="/" class="flag">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+      <clipPath id="t">
+      <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+      </clipPath>
+      <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
+      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+      <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"/>
+      <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+      <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
+      </svg>
+      <span class="ie-only">English</span>
+      </a>
+  </div>
+  <p>
+    Szeretettel Ada & Joe ❤️<span class="ie-only"> - ez az oldal jobban nez ki <a href"http://outdatedbrowser.com">egy korszerű böngészővél</a>!</span>
+  </p>
+  {% endif %}
+</footer>
 {% endblock %}

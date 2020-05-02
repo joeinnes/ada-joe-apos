@@ -1,6 +1,7 @@
 .flex(@direction: row, @break: nowrap, @alignHorizontal: center, @alignVertical: center) {
   display: flex;
   flex-flow: @direction @break;
+  -ms-flex-flow: @direction @break;
   justify-content: @alignHorizontal;
   align-items: @alignVertical;
 }

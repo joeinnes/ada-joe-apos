@@ -1,4 +1,8 @@
 .apos-refreshable {
   .flex(column, wrap, space-between, center);
-  min-height: 100vh;
+  min-height: 100vh; 
+  // IE11 compatibility hacks
+  main {
+    flex: 1 0 auto;
+  }
 }
